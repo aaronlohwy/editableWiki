@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <title> Log In Page </title>
+    <style type="text/css">
+      .label {text-align: right}
+      .error {color: red}
+      h1{
+        font-family:Georgia,serif;
+        color:#4E443C;
+        font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
+      }
+
+        form  { display: table;      }
+        p     { display: table-row;  }
+        label { display: table-cell; }
+        input { display: table-cell; }
+    </style>
+
+    <h1> Log In </h1>
+
+    <form method="post">
+    
+        <p>
+        <label>
+            Username
+         </label>
+        <input type="text" name="username" value="">
+        </p>
+        <p>
+        <label>
+            Password
+        </label>
+        <input type="password" name="password" value="">
+        </p>
+        <label class="error">{{error_login}} </label>
+        
+        <p>
+        <input type="submit">
+        </p>
+    </form>
+    <br>
+    Not a User? <a href="/signup">Sign Up here</a><br>
+    <hr>
+    <a href="/welcome">Back to main page</a>
+</html>

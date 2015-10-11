@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+ 	{% for bp in blogPosts[:10] %}
+ 	<!-- [:n] is syntax for slicing a list, so this case it would only give the
+ 	 first 10 elements-->
+ 	 
+ 		<div class="bpost">
+ 			<div class ="post-title">{{bp.subject}}</div>
+ 			<hr class="Separator">
+ 			<pre class ="post-body">{{bp.content}}</div>
+ 		</div>		
+ 	{% endfor %}
+
+<p>Queried {{elapsedtime}} seconds ago</p>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+ 	{% for wp in wikipagelist[:20] %}
+ 	<!-- [:n] is syntax for slicing a list, so this case it would only give the
+ 	 first 10 elements-->
+ 	 
+ 		<div>
+ 			<p>{{wp.last_modified.strftime("%a, %d %b %Y %H:%M:%S")}}</p>
+ 			<p>{{wp.content}}</p>
+ 		</div>
+
+ 		{% if user %}
+		<a href="/_edit{{page_name}}?v={{wp.key().id()}}">Edit</a>
+		{% endif %}
+		<a href="{{page_name}}?v={{wp.key().id()}}">view</a>
+
+ 	{% endfor %}
+
+<p>Queried {{elapsedtime}} seconds ago</p>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+ 		<div class="bpost">
+ 			<div class ="post-title">{{blogPost.subject}}</div>
+ 			<hr class="Seperator">
+ 			<pre class ="post-body">{{blogPost.content}}</div>
+ 		</div>		
+
+<p>Queried {{elapsedtime}} seconds ago</p>
+
+{% endblock %}

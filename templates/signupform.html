@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <title> Sign Up Page </title>
+    <style type="text/css">
+      .label {text-align: right}
+      .error {color: red}
+
+        form  { display: table;      }
+        p     { display: table-row;  }
+        label { display: table-cell; }
+        input { display: table-cell; }
+
+        h1{
+        font-family:Georgia,serif;
+        color:#4E443C;
+        font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
+      }
+    </style>
+    <h1> Sign Up </h1>
+
+    <form method="post">
+    
+        <p>
+        <label>
+            Username
+         </label>
+        <input type="text" name="username" value="{{username}}">
+        <label class="error">{{error_username}}</label>
+        </p>
+        <p>
+        <label>
+            Password
+         </label>
+        <input type="password" name="password" value="">
+        <label class="error">{{error_password}} </label>
+        </p>
+        <p>
+        <label>
+            Verify Password
+        </label>
+        <input type="password" name="verify" value="">
+        <label class="error">{{error_passwordmatch}}</label>
+        </p>
+        <p>
+        <label>
+            Email (optional)
+        </label>
+        <input type="text" name="email" value="{{email}}">
+        <label class = "error">{{error_email}}</label>
+        </p>
+        <p>
+        <input type="submit">
+        </p>
+    </form>
+    <br>
+    Already a user? <a href="/login">login here</a><br><hr>
+    <a href="/welcome">Back to main page</a>
+</html>

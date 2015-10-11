@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> /newPosts/ </title>
+	</head>
+
+	<style type ="text/css">
+		body {
+			font-family: sans-serif;
+			width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+
+		.error {
+			color:red;
+		}
+
+		label {
+			display:block;
+			font-size: 20 px;
+		}
+
+		input[type=text]{
+		 	width: 400px;
+		 	font-size: 20px;
+		}
+
+		textarea{
+		 	width: 400px;
+		 	height: 200px;
+		 	font-size: 17px;
+		 	font-family: monospace;
+		}
+
+		input[type=submit]{
+		 	font-size: 24px;
+		}
+
+		hr{
+		 	margin: 10px auto;
+		}
+
+	}
+
+	</style>
+
+	<body>
+		<h1>Edit this page</h1>
+
+		<form method = "post"> 
+		 	<label>
+		 		<div>Write your content here</div>
+		 		<textarea name="content">{{content}}</textarea>
+		 	</label>
+
+		 	<div class="error">{{error}}</div>
+
+		 	<input type="submit">
+		 	<p name = "name"> Your page will be available at this url: http://aaronsnewwiki.appspot.com{{page_name}}</p>
+		 	<hr>
+		</form>
+
+		<a href="/welcome">Back to main page</a>
+	</body>
+</html>
